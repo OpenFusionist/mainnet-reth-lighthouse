@@ -55,3 +55,30 @@ Example: `echo -n '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045' > fee_recipient.t
 ```
 ./status.sh
 ```
+
+### Upgrade for Pectra hardfork
+
+1.Pull the latest image:
+```
+cd mainnet-reth-lighthouse
+git pull origin main
+```
+
+2.Update genesis file:
+```
+./downloadGenesis.sh
+```
+
+3.Restart the node:
+```
+./down.sh
+./start.sh
+```
+
+4.Check the node logs, if you see the following message, it means the node is ready for the Pectra hardfork:
+```
+docker logs 2>&1  mainnet-reth-lighthouse-execution-1 | grep 'Prague'
+
+- Prague                           @1755669600```
+
+```
