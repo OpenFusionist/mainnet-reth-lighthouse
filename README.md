@@ -62,3 +62,30 @@ If you want to run node with mev-boost to capture mev rewards:
 ```
 ./status.sh
 ```
+
+### Upgrade for Pectra hardfork
+
+1.Pull the latest image:
+```
+cd mainnet-reth-lighthouse
+git pull origin main
+```
+
+2.Update genesis file:
+```
+./downloadGenesis.sh
+```
+
+3.Restart the node:
+```
+./down.sh
+./start.sh
+```
+
+4.Check the node logs, if you see the following message, it means the node is ready for the Pectra hardfork:
+```
+docker logs 2>&1  mainnet-reth-lighthouse-execution-1 | grep 'Prague'
+
+- Prague                           @1755669600```
+
+```

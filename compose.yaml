@@ -1,6 +1,6 @@
 services:
   execution:
-    image: ghcr.io/paradigmxyz/reth:v1.0.3
+    image: ghcr.io/paradigmxyz/reth:v1.3.12
     pull_policy: always
     command:
       - node
@@ -43,7 +43,7 @@ services:
     stop_grace_period: 1m
 
   beacon:
-    image: sigp/lighthouse:v6.0.1
+    image: sigp/lighthouse:v7.0.0
     pull_policy: always
     entrypoint: >
       lighthouse beacon_node
@@ -87,7 +87,7 @@ services:
     stop_grace_period: 1m
 
   validator:
-    image: sigp/lighthouse:v6.0.1
+    image: sigp/lighthouse:v7.0.0
     pull_policy: always
     entrypoint: >
       lighthouse validator_client
