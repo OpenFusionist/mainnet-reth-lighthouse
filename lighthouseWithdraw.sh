@@ -20,7 +20,7 @@ docker run \
   -it \
   -v $(pwd)/../network_config:/network_config \
   -v "$(pwd)/${KEYFILE}:/${KEYFILE}" \
-  sigp/lighthouse:latest \
+  ghcr.io/openfusionist/lighthouse:v7.0.2 \
   lighthouse \
   --datadir=/consensus-data \
   --testnet-dir=/network_config \
