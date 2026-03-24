@@ -43,7 +43,7 @@ services:
     stop_grace_period: 1m
 
   beacon:
-    image: sigp/lighthouse:v7.0.0
+    image: ghcr.io/openfusionist/lighthouse:v7.0.2
     pull_policy: always
     command:
       - lighthouse
@@ -87,7 +87,7 @@ services:
     stop_grace_period: 1m
 
   validator:
-    image: sigp/lighthouse:v7.0.0
+    image: ghcr.io/openfusionist/lighthouse:v7.0.2
     pull_policy: always
     command:
       - lighthouse

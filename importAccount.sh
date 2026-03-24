@@ -13,7 +13,7 @@ docker run \
   -v $(pwd)/consensus-data:/consensus-data \
   -v $VALIDATOR_KEYS_DIR:/validator_keys \
   -v $(pwd)/../network_config:/network_config \
-  sigp/lighthouse:latest \
+  ghcr.io/openfusionist/lighthouse:v7.0.2 \
   lighthouse \
   --testnet-dir=/network_config \
   --datadir=/consensus-data \
